@@ -154,7 +154,7 @@ class AppAuthWebPlugin extends FlutterAppAuthPlatform {
     if (request.authorizationCode != null) body["code"] = request.authorizationCode;
     if (request.codeVerifier != null) body["code_verifier"] = request.codeVerifier;
     if (request.refreshToken != null) body["refresh_token"] = request.refreshToken;
-    if (request.scopes != null && request.scopes!.isNotEmpty) body["scopes"] = request.scopes!.join(" ");
+    if (request.scopes != null && request.scopes!.isNotEmpty) body["scope"] = request.scopes!.join(" ");
 
     if (request.additionalParameters != null) body.addAll(request.additionalParameters!);
 
